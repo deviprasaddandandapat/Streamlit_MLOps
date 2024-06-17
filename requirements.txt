@@ -2,5 +2,4 @@ scikit-learn
 datetime
 streamlit
 yfinance
-pickle
 pandas
