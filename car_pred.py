@@ -49,4 +49,4 @@ if st.button("Predict"):
     transmission_encoded = encode_dict["transmissio_type"][transmissio_type]
 
     price = model_pred(fuel_encoded, transmission_encoded, seats, engine)
-    st.text("Predicted Price is" + str(price))
+    st.text("Predicted Price is $" + str(price))
