@@ -5,7 +5,7 @@ import datetime
 import pickle
 
 
-st.header('Cars 24 Price oprediction app')
+st.header('Cars 24 Price Prediction app')
 
 df = pd.read_csv("cars24-car-price-cleaned.csv")
 
