@@ -36,11 +36,12 @@ encode_dict = {
     "transmissio_type": {"Manual": 1, "Automatic": 2}
 }
 
-def model_pred (fuel_encoded, transmission_encoded, seats, engine):
-    with open("C:/Users/uz403f/Documents/Scaler/Streamlit/devivenv/car_pred_model", "rb") as file:
+def model_pred(fuel_encoded, transmission_encoded, seats, engine):
+    with open("model.pkl", "rb") as file:
         reg_model = pickle.load(file)
-        input_features = [[2012.0, 1, 12000, fuel_encoded ,transmission_encoded, 19.7, engine, 46.3, seats]]
-        return reg_model.predict(input_features)
+    features = [fuel_encoded, transmission_encoded, seats, engine]
+    price = reg_model.predict([features])
+    return price
     
 
 if st.button("Predict"):
