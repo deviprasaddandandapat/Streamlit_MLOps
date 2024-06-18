@@ -39,8 +39,8 @@ encode_dict = {
 def model_pred(fuel_encoded, transmission_encoded, seats, engine):
     with open("car_pred_model", "rb") as file:
         reg_model = pickle.load(file)
-    features = [fuel_encoded, transmission_encoded, seats, engine]
-    price = reg_model.predict([features])
+    input_features = [[2012.0, 1, 12000, fuel_encoded ,transmission_encoded, 19.7, engine, 46.3, seats]]
+    price = reg_model.predict(input_features)
     return price
     
 
