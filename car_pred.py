@@ -7,7 +7,7 @@ import pickle
 
 st.header('Cars 24 Price oprediction app')
 
-df = pd.read_csv("C:/Users/uz403f/Documents/Scaler/MLOPS_Tutorial/Streamlit_MLOps/cars24-car-price-cleaned.csv")
+df = pd.read_csv("cars24-car-price-cleaned.csv")
 
 
 #st.dataframe(df)
