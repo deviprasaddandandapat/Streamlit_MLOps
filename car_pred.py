@@ -37,7 +37,7 @@ encode_dict = {
 }
 
 def model_pred(fuel_encoded, transmission_encoded, seats, engine):
-    with open("model.pkl", "rb") as file:
+    with open("C:\Users\uz403f\Documents\Scaler\MLOPS_Tutorial\Streamlit_MLOps\car_pred_model", "rb") as file:
         reg_model = pickle.load(file)
     features = [fuel_encoded, transmission_encoded, seats, engine]
     price = reg_model.predict([features])
